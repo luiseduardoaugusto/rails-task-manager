@@ -1,0 +1,14 @@
+
+<div>
+  <h1>My tasks</h1>
+</div>
+
+<ol>
+  <% @tasks.each do |task|%>
+  <li><%= link_to task.title, task_path(task) %></li>
+  <% end %>
+</ol>
+
+<div>
+<%= link_to "agregar", new_path %>
+</div>
